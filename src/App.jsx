@@ -31,44 +31,48 @@ function App() {
           newLines = [...newLines, "info.txt", "skills.txt", "projects.txt", "contact.txt"];
         }
 
-        if (content === "pwd") {
+        else if (content === "pwd") {
           newLines = [...newLines, "/home/ak"];
         }
-        if (content === "id") {
+        else if (content === "id") {
           newLines = [...newLines, "uid=1000(ak) gid=1000(ak) groups=1000(ak),4(adm),24(cdrom),27(sudo),126(sambashare)"];
         }
 
-        if (content === "whoami") {
+        else if (content === "whoami") {
           newLines = [...newLines, "ak"];
         }
 
-        if (content === "uname -a") {
+        else if (content === "uname -a") {
           newLines = [...newLines, "Linux ak 5.4.0-80-generic #90-Ubuntu x86_64 GNU/Linux - Portfolio Terminal"];
         }
 
-        if (content === "uname") {
+        else if (content === "uname") {
           newLines = [...newLines, "Linux"];
         }
 
-        if (content === "cat info.txt") {
+        else if (content === "cat info.txt") {
           newLines = [...newLines, "Name: Sujan Sharma", "Location: On, Canada", "Occupation: Computer Programmer"];
         }
 
-        if (content === "cat skills.txt") {
+        else if (content === "cat skills.txt") {
           newLines = [...newLines, "Languages: JavaScript, Python, Java, C++, C, Ruby", "Frameworks: Django, React, Node.js, Express, Flask, Ruby on Rails", "Databases: MySQL, PostgreSQL, MongoDB, SQLite", "Tools: Git, Docker, Jenkins, Travis CI, Circle CI, Heroku, AWS, GCP"];
         }
 
-        if (content === "cat projects.txt") {
+        else if (content === "cat projects.txt") {
           newLines = [...newLines, "1. Portfolio Terminal", "2. QBX", "3. Dynamic YouTube title"];
         }
 
-        if (content === "cat contact.txt") {
+        else if (content === "cat contact.txt") {
           newLines = [...newLines, "Email: sujan@brokenai.ca, sujansharma2060@gmail.com", "LinkedIn: https://www.linkedin.com/in/NotSujanSharma/", "GitHub: https://www.github.com/NotSujanSharma"];
         }
 
-        if (content === "help") {
+        else if (content === "help") {
           newLines = [...newLines, "Available commands are: ls, cat, pwd, id, whoami, uname, clear, help"];
         }
+          
+          else {
+            newLines = [...newLines, `command not found: ${content}`];
+          }
         newLines.push(` `);
       }
       
@@ -105,7 +109,7 @@ function App() {
               type="text"
               ref={inputRef}
               onKeyDown={handleKeyPress}
-              placeholder='type ls to view contents of the directory'
+              placeholder='type ls to list files, cat info.txt to view info, help for more commands'
             />
           </div>
         </div>
