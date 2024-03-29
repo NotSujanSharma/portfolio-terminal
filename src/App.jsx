@@ -19,15 +19,16 @@ function App() {
   const executeCommand = (command) => {
     const commands = {
       ls: ["info.txt", "skills.txt", "projects.txt", "contact.txt"],
+      dir: ["info.txt", "skills.txt", "projects.txt", "contact.txt"],
       pwd: ["/home/ak"],
-      id: ["uid=1000(ak) gid=1000(ak) groups=1000(ak),4(adm),24(cdrom),27(sudo),126(sambashare)"],
+      id: ["uid=1000(ak) gid=1000(ak) groups=1000(ak),4(adm),24(cdrom),27(sudo)"],
       whoami: ["ak"],
       "uname -a": ["Linux ak 5.4.0-80-generic #90-Ubuntu x86_64 GNU/Linux - Portfolio Terminal"],
       uname: ["Linux"],
-      "cat info.txt": ["Name: Sujan Sharma", "Location: On, Canada", "Occupation: Computer Programmer"],
+      "cat info.txt": ["Name: Sujan Sharma", "Location: ON, Canada", "Occupation: Computer Programmer"],
       "cat skills.txt": ["Languages: JavaScript, Python, Java, C++, C, Ruby", "Frameworks: Django, React, Node.js, Express, Flask, Ruby on Rails", "Databases: MySQL, PostgreSQL, MongoDB, SQLite", "Tools: Git, Docker, Jenkins, Travis CI, Circle CI, Heroku, AWS, GCP"],
       "cat projects.txt": ["1. Portfolio Terminal", "2. QBX", "3. Dynamic YouTube title"],
-      "cat contact.txt": ["Email: sujan@brokenai.ca, sujansharma2060@gmail.com", "LinkedIn: https://www.linkedin.com/in/NotSujanSharma/", "GitHub: https://www.github.com/NotSujanSharma"],
+      "cat contact.txt": ["Email: sujan@brokenai.ca, sujansharma2060@gmail.com", "LinkedIn: https://www.linkedin.com/in/NotSujanSharma/", "GitHub: https://www.github.com/NotSujanSharma", "Website: https://www.brokenai.ca"],
       help: ["Available commands are: ls, cat, pwd, id, whoami, uname, clear, help"],
     };
 

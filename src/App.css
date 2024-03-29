@@ -21,6 +21,7 @@ nav{
 main{
   height:60vh;  
   padding:0.5rem;
+  font-family: "JetBrains Mono", monospace;
   
   background-color: rgba(57, 57, 109, 0.54);
 }
@@ -97,6 +98,7 @@ bg-blue{
 }
 input{
   border:none;
+  font-family: "JetBrains Mono", monospace;
   height: 1.4rem;
   width:100%;
   background-color: transparent;
